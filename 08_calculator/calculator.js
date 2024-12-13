@@ -15,16 +15,29 @@ const sum = function(array) {
   return sum;
 };
 
-const multiply = function() {
-
+const multiply = function(array) {
+  let product = array.reduce((total, current) => {
+    return total * current;
+  });
+  return product;
 };
 
-const power = function() {
-	
+const power = function(number, exponent) {
+	const result = number ** exponent;
+  return result;
 };
 
-const factorial = function() {
-	
+const factorial = function(number) {
+	if (number === 0) {
+    return 1;
+  } else {
+    let result = 1;
+    for (let i = 1; i <= number; i++) {
+      const tmp = result * i;
+      result = tmp;
+    }
+    return result;
+  }
 };
 
 // Do not edit below this line
